@@ -11,3 +11,22 @@ To align with project requirements, the dataset was filtered to include only com
 ## The resulting cleaned dataset provides high-quality textual inputs suitable for a Retrieval-Augmented Generation (RAG) pipeline, ensuring more accurate semantic search and response generation.
 
 ---
+
+---
+
+## ** Task 2: Text Chunking, Embedding, and Vector Store Indexing **
+
+**Objective:** Convert cleaned complaint narratives into vectors for efficient semantic search.
+
+**Steps:**
+
+1. **Stratified Sampling:** Select 10,000–15,000 complaints proportionally across product categories.
+2. **Text Chunking:** Split long complaints into smaller overlapping chunks (~500 chars, 50 overlap) using a custom splitter.
+3. **Embedding Generation:** Use `sentence-transformers/all-MiniLM-L6-v2` to convert chunks into vector embeddings.
+4. **Vector Store Indexing:** Store embeddings in a FAISS index with metadata (complaint ID, product) for fast semantic search.
+
+**Outcome:** Complaints are now searchable in vector space, enabling similarity queries and analysis.
+
+## **Deliverables:** Python script, FAISS index (`vector_store/faiss_index.idx`), and metadata (`vector_store/metadata.pkl`).
+
+---
