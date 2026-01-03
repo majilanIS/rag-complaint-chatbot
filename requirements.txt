@@ -1,0 +1,19 @@
+# Data processing
+pandas
+numpy
+
+# NLP & embeddings
+sentence-transformers
+faiss-cpu          
+chromadb
+
+# LLM and RAG
+langchain
+
+
+# Web UI
+streamlit
+gradio
+
+# Utilities
+tqdm
