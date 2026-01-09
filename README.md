@@ -30,3 +30,20 @@ To align with project requirements, the dataset was filtered to include only com
 ## **Deliverables:** Python script, FAISS index (`vector_store/faiss_index.idx`), and metadata (`vector_store/metadata.pkl`).
 
 ---
+
+---
+
+## **_ Task 3: Building the RAG Core Logic and Evaluation _**
+
+## Overview
+
+This project implements a **Retrieval-Augmented Generation (RAG) pipeline** for analyzing customer complaints at CrediTrust. The system combines a vector store of pre-embedded complaint text chunks with an instruction-following language model to answer user questions based on retrieved context.
+
+The pipeline:
+
+1. Retrieves the most relevant complaint excerpts from a FAISS vector store.
+2. Builds a prompt instructing the LLM to answer only using the retrieved context.
+3. Generates a response using a language model.
+4. Optionally, evaluates multiple questions and produces an evaluation table.
+
+---
